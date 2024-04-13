@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Website</title>
+<style>
+  /* Basic styling for the navigation menu */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+  }
+  .navbar {
+    background-color: #333;
+    color: #ffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  .navbar-brand img {
+    max-width: 50px;
+    margin-right: 10px;
+  }
+  .navbar-menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar-menu li {
+    margin-right: 20px;
+  }
+  .navbar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .navbar-menu li a:hover {
+    color: #ffd700; /* Change to your preferred hover color */
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+  }
+  .dropdown-content a:hover {
+    background-color: #444; /* Change to your preferred hover background color */
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .btn-login,
+  .btn-register {
+    background-color: #ffd700;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+  }
+  .btn-login:hover,
+  .btn-register:hover {
+     /* Change to your preferred hover background color */
+  }
+  /* Styling for the background image section */
+  .background-image {
+    background-image: url('your-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+  }
+  .background-image h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  .background-image h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: changeText 0.2s linear infinite alternate; /* Animation for changing text */
+  }
+  .background-image .btn-book-now {
+    background-color: #ffd700;
+    color: #333;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  .background-image .btn-book-now:hover {
+    background-color: #ffcc00; /* Change to your preferred hover background color */
+  }
+  @keyframes changeText {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: 	#dfeef0;
+  }
+  .row {
+    display: flex;
+  }
+  .column {
+    width: 50%;
+    padding: 20px;
+  }
+  .brand-image {
+    max-width: 100%;
+    height: auto;
+  }
+  .form-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background-color:	#55d9f3;
+  }
+  .form-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+
+  }
+  .form-container input[type="text"],
+  .form-container select,
+  .form-container textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  .form-container button {
+    background-color: #075281;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .div11  {
+    
+    display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+  }
+  .div1,.div2,.div3,.div4,.div5,.div6,.div7,.div8,.div9 {
+    padding: 20px;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding:10px;
+        margin-bottom: 20px;
+        width: 90%;
+        margin-left: 10px;
+        margin-top: 20px;
+  }
+  .package-image {
+    max-width: 100%;
+    height: auto;
+  }
+  .package-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  .package-description {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  .package-price {
+    font-size: 1.1em;
+    color: green;
+    margin-bottom: 5px;
+  }
+  .package-rating {
+    font-size: 0.9em;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  .book-now-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .services {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .services h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  .services ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .services li {
+    margin-bottom: 5px;
+  }
+
+
+
+    /* Gallery Section */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+    }
+    .gallery-item img {
+        width: 100%;
+        height: 500px;
+        padding: -5px;
+        transition: transform 0.3s ease;
+    }
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+
+    /* About Us Section */
+    .about {
+        display: flex;
+    }
+    .about-image {
+        margin-left: 10px;
+        padding: 10px;
+    }
+    .about-info {
+        width: 50%;
+        padding: 20px;
+        font-style: italic;
+        font-weight: bold ;
+    }
+
+
+    /* Footer */
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="navbar-brand">
+    <!-- You can use either a brand name, a logo, or both -->
+    <img src="C:\Users\Dell\OneDrive\Pictures\New folder\2568894.jpg" alt="Logo">
+    <span>Brand Name</span>
+  </div>
+  <ul class="navbar-menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Book</a></li>
+    <li class="dropdown">
+      <a href="#">Packages</a>
+      <div class="dropdown-content">
+        <a href="#">United States</a>
+        <a href="#">India</a>
+        <a href="#">France</a>
+        <a href="#">Germany</a>
+      </div>
+    </li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Gallery</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+  <a href="file:///C:/Users/Dell/Downloads/check5.html" class="btn-login">Login</a>
+  <a href="file:///C:/Users/Dell/Downloads/check6.html" class="btn-register">Register</a>
+</div>
+
+<div class="background-image">
+  <h1 style="color: #333;">Welcome to BrandName</style></h1>
+  <h2 id="placeName">Visit Placename</h2>
+  <button class="btn-book-now">Book Now</button>
+</div><div class="row">
+  <div class="column">
+    <img src="C:\Users\Dell\OneDrive\Pictures\New folder\2568894.jpg"width="65%" alt="Brand Image" class="brand-image">
+  </div>
+  <div class="column form-container">
+    <form id="bookingForm">
+      <label for="whereTo">Where to:</label>
+      <select id="whereTo" name="whereTo">
+        <option value="Sample Place 1">HOTEL TAJ</option>
+        <option value="Sample Place 2">GATE WAY OF INDIA</option>
+        <!-- Add more options as needed -->
+      </select>
+      <label for="howMany">How Many Person:</label>
+      <input type="text" id="howMany" name="howMany">
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate" name="startDate" min="2024-04-14">
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate" name="endDate" min="2024-04-14">
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" rows="5" minlength="50" maxlength="500"></textarea>
+      <button type="submit" class="book-now-btn">Book Now</button>
+    </form>
+  </div>
+</div>
+
+<div class="div11">
+  <!-- Repeat this card structure for each package -->
+  <div class="div1">
+    <img src="C:\Users\Dell\OneDrive\Pictures\New folder\Rajstan.jpg" alt="Place Image" class="package-image">
+    <h2 class="package-title">Rajasthan</h2>
+    <p class="package-description">Attractions description goes here.</p>
+    <div class="package-price">$65</div>
+    <div class="package-rating">Rating: ★★★★★</div>
+    <button class="book-now-btn">Book Now</button>
+  </div>
+
+
+    <!-- Repeat this card structure for each package -->
+    <div class="div2">
+      <img src="C:\Users\Dell\OneDrive\Pictures\New folder\agra.jpg" alt="Place Image" class="package-image">
+      <h2 class="package-title">Agra</h2>
+      <p class="package-description">Attractions description goes here.</p>
+      <div class="package-price">$65</div>
+      <div class="package-rating">Rating: ★★★★★</div>
+      <button class="book-now-btn">Book Now</button>
+    </div>
+  
+  
+    <!-- Repeat this card structure for each package -->
+    <div class="div3">
+      <img src="C:\Users\Dell\OneDrive\Pictures\New folder\kerala.jpg" alt="Place Image" class="package-image">
+      <h2 class="package-title">Kerala</h2>
+      <p class="package-description">Attractions description goes here.</p>
+      <div class="package-price">$65</div>
+      <div class="package-rating">Rating: ★★★★★</div>
+      <button class="book-now-btn">Book Now</button>
+    </div>
+  
+  
+    <!-- Repeat this card structure for each package -->
+    <div class="div4">
+      <img src="C:\Users\Dell\OneDrive\Pictures\New folder\varanasi.jpg" alt="Place Image" class="package-image">
+      <h2 class="package-title"> Varanasi</h2>
+      <p class="package-description">Attractions description goes here.</p>
+      <div class="package-price">$60</div>
+      <div class="package-rating">Rating: ★★★★☆</div>
+      <button class="book-now-btn">Book Now</button>
+    </div>
+  
+  
+    <!-- Repeat this card structure for each package -->
+    <div class="div5">
+      <img src="C:\Users\Dell\OneDrive\Pictures\New folder\setu-chhaya-NNw5d3K_j9o-unsplash.jpg" Place Image" class="package-image">
+      <h2 class="package-title">Ellora & Ajanta Caves</h2>
+      <p class="package-description">Attractions description goes here.</p>
+      <div class="package-price">$60</div>
+      <div class="package-rating">Rating: ★★★★☆</div>
+      <button class="book-now-btn">Book Now</button>
+    </div>
+  
+  
+    <!-- Repeat this card structure for each package -->
+    <div class="div6">
+      <img src="C:\Users\Dell\OneDrive\Pictures\New folder\delhi.jpg" alt="Place Image" class="package-image">
+      <h2 class="package-title">Delhi</h2>
+      <p class="package-description">Attractions description goes here.</p>
+      <div class="package-price">$60</div>
+      <div class="package-rating">Rating:★★★★☆</div>
+      <button class="book-now-btn">Book Now</button>
+    </div>
+  
+  
+    <!-- Repeat this card structure for each package -->
+    <div class="div7">
+      <img src="C:\Users\Dell\OneDrive\Pictures\New folder\goa.jpg" alt="Place Image" class="package-image">
+      <h2 class="package-title">Goa Beaches</h2>
+      <p class="package-description">Attractions description goes here.</p>
+      <div class="package-price">$55</div>
+      <div class="package-rating">Rating: ★★★☆☆</div>
+      <button class="book-now-btn">Book Now</button>
+    </div>
+  
+  
+    <!-- Repeat this card structure for each package -->
+    <div class="div8">
+      <img src="C:\Users\Dell\OneDrive\Pictures\New folder\leh.jpg" alt="Place Image" class="package-image">
+      <h2 class="package-title">Ladakh </h2>
+      <p class="package-description">Attractions description goes here.</p>
+      <div class="package-price">$55</div>
+      <div class="package-rating">Rating: ★★★☆☆</div>
+      <button class="book-now-btn">Book Now</button>
+    </div>
+  
+  
+    <!-- Repeat this card structure for each package -->
+    <div class="div9">
+      <img src="C:\Users\Dell\OneDrive\Pictures\New folder\mysore.jpg" alt="Place Image" class="package-image">
+      <h2 class="package-title">Mysore</h2>
+      <p class="package-description">Attractions description goes here.</p>
+      <div class="package-price">$50</div>
+      <div class="package-rating">Rating: ★★★★★</div>
+      <button class="book-now-btn">Book Now</button>
+    </div>
+</div>
+
+
+<div class="services">
+  <h2>Services Offered</h2>
+  <ul>
+    <li>Affordable Hotel</li>
+    <li>Food & Drinks</li>
+    <li>Safety Guide</li>
+    <li>Transportation Services</li>
+    <li>Tour Guides</li>
+    <li>Adventure Activities</li>
+  </ul>
+</div>
+
+    <!-- Gallery Section -->
+    <div class="gallery">
+     
+      
+        <div class="gallery-item"><img src="C:\Users\Dell\OneDrive\Pictures\New folder\goa.jpg"  alt="Photo 1"></div>
+        <div class="gallery-item"><img src="C:\Users\Dell\OneDrive\Pictures\New folder\delhi.jpg" alt="Photo 2"></div>
+        <div class="gallery-item"><img src="C:\Users\Dell\OneDrive\Pictures\New folder\rajstan.jpg" alt="Photo 3"></div>
+        <div style="position: absolute;padding: 20px;margin-left: 200px;font-size:60px;text-transform: uppercase;color:#fff;font-weight: bold;font-style: italic;margin-top: 5px;"> story-worthy travel moments</div>
+        <!-- Add more gallery i
+          tems as needed -->
+    </div>
+
+    <!-- About Us Section -->
+    <div class="about">
+        <div class="about-image"><img src="C:\Users\Dell\OneDrive\Pictures\New folder\fotor-2024041317400.jpg" width =200px; height =200px; alt="Company Logo"></div>
+        <div class="about-info">
+            <h2>About Us</h2>
+            <p>Company Profile
+                TravelStore is the largest independently owned travel agency headquartered in California, and consistently ranked among the top 50 largest in the United States.
+                
+                OUR MISSION STATEMENT
+                "We are an employee-owned company with a passion for providing exemplary customer service, leveraging our expertise and technology to deliver innovative travel solutions in a gratifying work environment."</p>
+            <!-- Add more company information here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div>BrandName</div>
+        <div>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <!-- Add more social media icons as needed -->
+        </div>
+        <div>&copy; All Rights Reserved</div>
+    </footer>
+
+<script>
+  const bookingForm = document.getElementById('bookingForm');
+  bookingForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(bookingForm);
+    const description = formData.get('description');
+    if (description.length >= 50) {
+      alert('Booking successful!');
+    } else {
+      alert('Description must be at least 50 characters long.');
+    }
+  });
+</script>
+
+<script>
+  // JavaScript to change the second line text after every 0.2 seconds
+  const placeNames = ['Country1', 'Country2', 'Country3', 'Country4', 'Country5']; // Add your country names here
+  let index = 0;
+
+  function changePlaceName() {
+    document.getElementById('placeName').textContent = placeNames[index];
+    index = (index + 1) % placeNames.length;
+  }
+
+  setInterval(changePlaceName, 200);
+</script>
+
+</body>
+</html>
