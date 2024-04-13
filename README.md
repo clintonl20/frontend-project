@@ -6,3 +6,6 @@
 ![Screenshot 2024-04-13 223725](https://github.com/clintonl20/frontend-project/assets/95079559/35180aa6-342d-4c27-bc10-8054255d1423)
 ![Screenshot 2024-04-13 223738](https://github.com/clintonl20/frontend-project/assets/95079559/1057b461-0899-4398-a916-7576cbb6aecd)
 ![Screenshot 2024-04-13 223757](https://github.com/clintonl20/frontend-project/assets/95079559/46899305-1333-4681-a2f3-b022a0861054)
+![Screenshot 2024-04-13 224356](https://github.com/clintonl20/frontend-project/assets/95079559/a8b64a68-6173-4594-a539-5c54d14ca508)
+![Screenshot 2024-04-13 224406](https://github.com/clintonl20/frontend-project/assets/95079559/6754c0e2-02f8-4e90-9903-a94eb2ee63a9)
+
